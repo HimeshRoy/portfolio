@@ -119,3 +119,20 @@ header {
 .skills-section .card:hover{
     border: 2px solid #5194ff;
 }
+
+.project-section i:hover{
+    color: #5194ff;
+}
+
+.project-section .card:hover{
+box-shadow: rgba(133, 169, 255, 0.24) 0px 3px 8px;
+cursor: pointer;
+}
+
+.contact-section #form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
