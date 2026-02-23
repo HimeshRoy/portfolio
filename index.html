@@ -19,9 +19,9 @@
             <ul class="navList fs-4">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
@@ -38,9 +38,9 @@
                     problem-solving, and building impactful digital experiences.</p>
             </div>
             <div class="btn-section text-center mt-5">
-                <button type="button" class="btn-work btn btn-primary btn-lg">View My Work</button>
+                <button type="button" class="btn-work btn btn-primary btn-lg" onclick="location.hash='#projects'">View My Work</button>
                 <button type="button"
-                    class="btn-contact text-light btn btn-lg bg-secondary bg-opacity-25 border border-light border-opacity-25">Contact</button>
+                    class="btn-contact text-light btn btn-lg bg-secondary bg-opacity-25 border border-light border-opacity-25" onclick="location.hash='#contact'">Contact</button>
             </div>
 
             <div class="social text-center my-5">
@@ -53,10 +53,97 @@
             </div>
         </section>
 
-        <hr class="border border-primary border-1 opacity-50 w-75 mx-auto">
+        <hr class="border border-primary border-1 opacity-50 w-75 mx-auto my-5">
 
         <section id="about" class="about-section container-lg">
-            
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="text-primary"><i class="fa-regular fa-user"></i> About Me</p>
+                    <span class="text-light fs-1 fw-bold">Building a foundation in Computer Science</span>
+                    <p class="text-light text-opacity-50 fs-5 font-weight-normal">Currently pursuing my B.Tech in
+                        Computer Science and Engineering with Specialization in Artificial Intelligence and Machine
+                        Learning. I am passionate about how software can solve real-world
+                        problems. My current focus is on mastering Data Structures, Algorithms, and modern Web
+                        Technologies.</p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card bg-dark bg-opacity-50">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary"><i class="fa-solid fa-graduation-cap"></i></h5>
+                                    <h4 class="card-subtitle mb-2 text-light">Education</h4>
+                                    <p class="card-text text-light opacity-75">B.Tech in CSE with Specialization in AI &
+                                        ML (1st Year) <br>
+                                        Geeta University, Panipat</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-dark bg-opacity-50">
+                                <div class="card-body">
+                                    <h5 class="card-title text-primary"><i class="fa-solid fa-terminal"></i></h5>
+                                    <h4 class="card-subtitle mb-2 text-light">Interests</h4>
+                                    <p class="card-text text-light opacity-75">Web Development <br>
+                                        <br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="innerDiv w-100 h-100 bg-primary rounded rounded-5">
+                        <img class="w-100" src="/WhatsApp Image 2026-02-23 at 2.07.58 PM.jpeg" alt="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border border-primary border-1 opacity-50 w-75 mx-auto my-5">
+
+        <section id="skills" class="skills-section container-lg">
+            <h1 class="text-light fs-1 fw-bold text-center mb-5">Skills & Technologies</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-dark bg-opacity-50">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Languages</h3>
+                            <ul class="list-group  list-group-flush">
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">HTML 5</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">CSS</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">C/C++</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Java Script</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Pyhton</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card bg-dark bg-opacity-50">
+                        <div class="card-body">
+                            <h3 class="card-title text-primary">Tools</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">VS Code</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Antigravity</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Git & GitHub</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">RAPTOR Avalonia</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Bootstrap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </section>
+
+        <hr class="border border-primary border-1 opacity-50 w-75 mx-auto my-5">
+
+        <section id="projects" class="project-section container-lg">
+            <p class="text-primary"><i class="fa-solid fa-microchip"></i>SHOWCASE</p>
+            <h1 class="text-light fs-1 fw-bold mb-5">Featured Projects</h1>
         </section>
     </main>
 

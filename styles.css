@@ -2,11 +2,13 @@
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
 }
+
 .my-custom-color {
     background-color: #020617;
 }
@@ -44,12 +46,13 @@ header {
 /* main */
 
 /* hero-section */
-.hero-section{
+.hero-section {
     display: contents;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .hero-section .name {
     font-size: 5rem;
     font-weight: bold;
@@ -58,13 +61,15 @@ header {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .hero-section .im {
     font-size: 5rem;
     font-weight: bold;
     color: white;
 }
-.hero-section p{
-    color: rgb(255, 255, 255,0.7);
+
+.hero-section p {
+    color: rgb(255, 255, 255, 0.7);
     font-weight: 200;
 }
 
@@ -75,20 +80,42 @@ header {
     align-items: center;
     gap: 2rem;
 }
+
 .btn-section button {
     width: 15%;
 }
 
-.btn-work:hover{
+.btn-work:hover {
     transform: scale(1.05);
     box-shadow: rgba(54, 139, 224, 0.2) 0px 8px 24px;
 }
 
-.btn-contact:hover{
+.btn-contact:hover {
     transform: scale(1.05);
 }
 
-.social a{
+.social a {
     color: gray;
     margin: 10px;
+}
+
+.about-section .innerDiv {
+    position: relative;
+    inset: 0;
+    background: #2563eb;
+    border-radius: 20px;
+    transform: rotate(6deg);
+    z-index: -1;
+}
+
+.about-section .innerDiv img{
+    position: relative;
+    inset: 0;
+    border-radius: 20px;
+    transform: rotate(-6deg);
+    z-index: -1;
+}
+
+.skills-section .card:hover{
+    border: 2px solid #5194ff;
 }
