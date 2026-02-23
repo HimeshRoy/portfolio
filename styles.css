@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+}
+.my-custom-color {
+    background-color: #020617;
+}
+
+/* header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(168, 215, 255, 0.5);
+    position: static;
+    top: 0;
+}
+
+.navitem {
+    width: 40%;
+}
+
+.navList {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navList a {
+    text-decoration: none;
+    color: white;
+}
+
+.navList a:hover {
+    color: rgb(0, 136, 255);
+}
+
+/* main */
+
+/* hero-section */
+.hero-section{
+    display: contents;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hero-section .name {
+    font-size: 5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #5194ff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-section .im {
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+}
+.hero-section p{
+    color: rgb(255, 255, 255,0.7);
+    font-weight: 200;
+}
+
+
+.btn-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.btn-section button {
+    width: 15%;
+}
+
+.btn-work:hover{
+    transform: scale(1.05);
+    box-shadow: rgba(54, 139, 224, 0.2) 0px 8px 24px;
+}
+
+.btn-contact:hover{
+    transform: scale(1.05);
+}
+
+.social a{
+    color: gray;
+    margin: 10px;
+}
