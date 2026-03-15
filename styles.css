@@ -108,31 +108,246 @@ header {
     z-index: -1;
 }
 
-.about-section .innerDiv img{
+.about-section .innerDiv{
+    width: 100%;
+    height: 100%;
+}
+.about-section .innerDiv img {
     position: relative;
     inset: 0;
     border-radius: 20px;
     transform: rotate(-6deg);
     z-index: -1;
+    width: 100%;
 }
 
-.skills-section .card:hover{
+.skills-section .card:hover {
     border: 2px solid #5194ff;
 }
 
-.project-section i:hover{
+.project-section i:hover {
     color: #5194ff;
 }
 
-.project-section .card:hover{
-box-shadow: rgba(133, 169, 255, 0.24) 0px 3px 8px;
-cursor: pointer;
+.project-section .card:hover {
+    box-shadow: rgba(133, 169, 255, 0.24) 0px 3px 8px;
+    cursor: pointer;
 }
 
-.contact-section #form {
+.contact-section .contact-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 75%;
+}
+
+
+
+/**************************************************************************************/
+
+@media (max-width:800px) {
+    header .navitem {
+        display: none;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section{
+        width: 100%;
+    }
+    
+    .hero-section .name {
+        font-size: 3rem;
+    }
+
+    .hero-section .im {
+        font-size: 3rem;
+    }
+
+    main .hero-section p {
+        font-size: medium;
+        width: 100%;
+    }
+
+    .hero-section .btn-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .hero-section .btn-section button{
+        width: 100%;
+    }
+
+    .about-section h1{
+        width: 80%;
+        text-align: center;
+    }
+    .about-section .about-text{
+        text-align: center;
+        width: 80%;
+    }
+    .about-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-section .main-div{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .about-section .main-div .col-md-8{
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .about-section .card-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 90%;
+    }
+    .about-section .card-div .col-md-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    .about-section .card-div .col-md-6 .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-section .innerDiv{
+        width: 60%;
+    }
+
+    .skills-section .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .skills-section .row .col-md-4{
+        width: 80%;
+    }
+
+    .project-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-section .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .project-section .row .col-md-4{
+        width: 80%;
+    }
+
+    .contact-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+    }
+
+
+    .contact-section .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        width: 80%;
+    }
+
+    .contact-section p{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-section .contact-form{
+        width: 100%;
+    }
+
+    .contact-section .contact-form .row{
+        gap: 1rem;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p{
+        width: 80%;
+    }
+
+}
+
+@media (max-width:500) {
+    header .navitem {
+        display: none;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main #home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-section .name {
+        font-size: 2rem;
+    }
+
+    .hero-section .im {
+        font-size: 2rem;
+    }
+
+    main .hero-section p {
+        font-size: medium;
+        width: 100%;
+    }
+
+    .hero-section .btn-section button {
+        width: 30%;
+    }
 }

@@ -58,17 +58,17 @@
         <hr class="border border-primary border-1 opacity-50 w-75 mx-auto my-5">
 
         <section id="about" class="about-section container-lg">
-            <div class="row">
+            <div class="row main-div">
                 <div class="col-md-8">
                     <p class="text-primary"><i class="fa-regular fa-user"></i> About Me</p>
-                    <span class="text-light fs-1 fw-bold">Building a foundation in Computer Science</span>
-                    <p class="text-light text-opacity-50 fs-5 font-weight-normal">Currently pursuing my B.Tech in
+                    <h1 class="text-light ">Building a foundation in Computer Science</h1>
+                    <p class="about-text text-light text-opacity-50 fs-5 font-weight-normal">Currently pursuing my B.Tech in
                         Computer Science and Engineering with Specialization in Artificial Intelligence and Machine
                         Learning. I am passionate about how software can solve real-world
                         problems. My current focus is on mastering Data Structures, Algorithms, and modern Web
                         Technologies.</p>
 
-                    <div class="row">
+                    <div class="row card-div d-flex justify-content-center align-items-center">
                         <div class="col-md-6">
                             <div class="card bg-dark bg-opacity-50">
                                 <div class="card-body">
@@ -93,9 +93,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="innerDiv w-100 h-100 bg-primary rounded rounded-5">
-                        <img class="w-100" src="WhatsApp%20Image%202026-02-23%20at%202.07.58%20PM.jpeg" alt="pfp">
+                <div class="col-md-4 d-flex justify-content-center align-items-center">
+                    <div class="innerDiv bg-primary rounded rounded-5">
+                        <img src="WhatsApp%20Image%202026-02-23%20at%202.07.58%20PM.jpeg" alt="pfp">
                     </div>
                 </div>
             </div>
@@ -237,8 +237,8 @@
             </div>
             <div class="row d-flex justify-content-center align-items-center">
                 <form action="" method="POST" id="Messageform"
-                    class="contact-form form w-75 d-flex flex-column justify-content-center align-items-center">
-                    <div class="row w-75">
+                    class="contact-form form d-flex flex-column justify-content-center align-items-center">
+                    <div class="row w-100">
                         <div class="col-md-6">
                             <form class="form-floating">
                                 <label for="nameInput" class="text-light fs-4">Name</label>
@@ -281,14 +281,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
-        emailjs.init('ja5YjCNkAPzSnNyw7'); // paste your public key here
+        emailjs.init('ja5YjCNkAPzSnNyw7'); // public key
 
         function sendMessage() {
             const name = document.getElementById('nameInput').value;
             const email = document.getElementById('emailInput').value;
             const message = document.getElementById('floatingTextarea').value;
 
-            // Basic validation
             if (!name || !email || !message) {
                 alert('Please fill all fields!');
                 return;
