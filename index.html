@@ -115,7 +115,7 @@
                                 <li class="list-group-item bg-dark bg-opacity-25 text-light">CSS</li>
                                 <li class="list-group-item bg-dark bg-opacity-25 text-light">C/C++</li>
                                 <li class="list-group-item bg-dark bg-opacity-25 text-light">Java Script</li>
-                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Pyhton</li>
+                                <li class="list-group-item bg-dark bg-opacity-25 text-light">Python</li>
                             </ul>
                         </div>
                     </div>
@@ -236,34 +236,38 @@
                     or opportunities to be part of your visions.</p>
             </div>
             <div class="row d-flex justify-content-center align-items-center">
-            <form action="" id="form" class="contact-form form w-75">
-                <div class="row w-75">
-                    <div class="col-md-6">
-                        <form class="form-floating">
-                            <label for="floatingInputValue" class="text-light fs-4">Name</label>
-                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Your Name">
-                        </form>
+                <form action="" method="POST" id="Messageform"
+                    class="contact-form form w-75 d-flex flex-column justify-content-center align-items-center">
+                    <div class="row w-75">
+                        <div class="col-md-6">
+                            <form class="form-floating">
+                                <label for="nameInput" class="text-light fs-4">Name</label>
+                                <input type="text" name="name" class="form-control" id="nameInput"
+                                    placeholder="Your Name">
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <form class="form">
+                                <label for="emailInput" class="text-light fs-4">Email</label>
+                                <input type="email" name="email" class="form-control" id="emailInput"
+                                    placeholder="name@email.com" value="name@email.com">
+                            </form>
+                        </div>
+
+                        <div class="col-md-12 mt-3">
+                            <div class="form-floating d-flex flex-column">
+                                <textarea class="form-control" placeholder="Leave a message here" id="floatingTextarea"
+                                    name="message"></textarea>
+                                <label for="floatingTextarea">Message</label>
+                            </div>
+                            <div class="col-md-12 text-center mt-3">
+                                <button type="submit" onclick="sendMessage()" class="btn btn-primary btn-lg w-100">
+                                    Send Message <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <form class="form">
-                            <label for="floatingInputValue" class="text-light fs-4">Email</label>
-                            <input type="email" class="form-control" id="floatingInputValue"
-                                placeholder="name@email.com" value="name@email.com">
-                        </form>
-                    </div>
-                
-                <div class="col-md-12 mt-3">
-                    <div class="form-floating d-flex flex-column">
-                        <textarea class="form-control" placeholder="Leave a message here"
-                            id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea">Messgae</label>
-                    </div>
-                    <div class="col-md-12 text-center mt-3">
-                        <button type="button" class="btn btn-primary btn-lg w-100">Messgae <i class="fa-solid fa-paper-plane"></i></button>
-                    </div>
-                </div>
-                </div>
-            </form>
+                </form>
             </div>
         </section>
     </main>
@@ -273,6 +277,38 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init('ja5YjCNkAPzSnNyw7'); // paste your public key here
+
+        function sendMessage() {
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            const message = document.getElementById('floatingTextarea').value;
+
+            // Basic validation
+            if (!name || !email || !message) {
+                alert('Please fill all fields!');
+                return;
+            }
+
+            emailjs.send('service_cgin0on', 'template_05bf7wj', {
+                name: name,
+                email: email,
+                message: message
+            })
+                .then(() => {
+                    alert('Message sent successfully!');
+                })
+                .catch(() => {
+                    alert('Something went wrong. Try again.');
+                });
+        }
+    </script>
+
+
 </body>
 
 </html>
